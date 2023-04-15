@@ -1,0 +1,13 @@
+.inputPrecio {
+    width: 80%;
+    height: 30px;
+}
+
+button {
+    min-width: none;
+    padding: 10px;
+    margin: 5px;
+    font-weight: bold;
+    color: white;
+    background-color: blueviolet;
+}
