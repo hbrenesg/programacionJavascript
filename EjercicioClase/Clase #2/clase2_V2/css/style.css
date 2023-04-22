@@ -1,0 +1,14 @@
+.precioContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.totalP {
+    font-weight: bold;
+}
+
+select {
+    height: 33px;
+    border-radius: 5px;
+}
