@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js"></script>
+</head>
+
+<body>
+    <div class="mainContainer">
+        <h1>Hotel</h1>
+        <input type="text" placeholder="Nombre" id="nombreInput">
+        <input type="text" placeholder="Apellido" id="apellidoInput">
+        <input type="text" placeholder="Precio Habitación" id="precioInput">
+        <input type="text" placeholder="Noches" id="nochesInput">
+        <select name="descuentos" id="descuentoSlt">
+            <option value="1" id="descuento1">0%</option>
+            <option value="2" id="descuento2">5%</option>
+            <option value="3" id="descuento3">10%</option>
+            <option value="4" id="descuento4">25%</option>
+        </select>
+        <select name="tipoClientes" id="tipoClienteSlt">
+            <option value="1">Normal</option>
+            <option value="2">VIP</option>
+            <option value="3">Premium</option>
+        </select>
+        <button id="calcularBtn">Calcular</button>
+        <button id="historialBtn">Historial</button>
+        <p id="historialP"></p>
+    </div>
+</body>
+
+</html>

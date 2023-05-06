@@ -1,0 +1,14 @@
+.mainContainer {
+    margin-left: 5%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-top: 5px;
+}
+
+select {
+    margin-top: 5px;
+}
