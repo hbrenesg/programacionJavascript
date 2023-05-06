@@ -1,4 +1,5 @@
 window.onload = function () {
+    //Esto es crear un nuevo arreglo
     var precios = [];
     console.log(precios);
 

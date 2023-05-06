@@ -1,0 +1,41 @@
+.tituloContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: serif;
+}
+
+h3 {
+    align-items: center;
+}
+
+.datosContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputDatos {
+    width: 80%;
+    height: 30px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+button {
+    border-style: none;
+    padding: 10px;
+    margin: 5px;
+    width: 80%;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgb(51, 111, 216);
+    outline: none;
+    border-radius: 5px;
+}
+
+.selectEstudiantes {
+    width: 80%;
+}

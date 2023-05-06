@@ -1,6 +1,4 @@
 window.onload = function () {
-    var precios = [];
-    console.log(precios);
 
     var articulosSlt = document.getElementById('articulosSlt');
     var agregarArticuloBtn = document.getElementById('agregarArticuloBtn');
@@ -20,7 +18,13 @@ window.onload = function () {
     }
 
     function agregarArticulo() {
+        //Esto me muestra todo lo que es en js el objeto articulosSlt
         // console.dir(articulosSlt);
+
+        //Esto me muestra el value del objeto que está seleccionado
+        // console.log(articulosSlt.value);
+
+
         // console.dir(articulosSlt.selectedIndex);
         // console.log(articulosSlt.children[articulosSlt.selectedIndex].textContent);
 

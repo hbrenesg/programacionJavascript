@@ -1,0 +1,58 @@
+/**
+* @name style.css
+* @file Add a small description for this file.
+* @author ep@estebanpadilla.com
+* @version 1.0.0
+*/
+
+:root {
+    --primary-color: #263238;
+    --secondary-color: #f50057;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h1 {
+    color: var(--primary --color)
+}
+
+h2 {
+    color: var(--secondary-color)
+}
+
+button {
+    border-style: none;
+    padding: 10px 10px 10px 10px;
+    margin: 5px 5px 5px 5px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: var(--secondary-color);
+    outline: none;
+    border-radius: 5px;
+}
+
+button:focus {
+    outline: none;
+}
+
+.input_precio {
+    width: 80%;
+    height: 30px;
+}
+
+.precioContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

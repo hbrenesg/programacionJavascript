@@ -1,0 +1,34 @@
+.precioContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.totalP {
+    font-weight: bold;
+}
+
+select {
+    height: 33px;
+    border-radius: 5px;
+}
+
+.articulosContainer {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    border-style: none;
+    padding: 10px;
+    margin: 5px;
+    font-weight: bold;
+    color: white;
+    background-color: purple;
+    outline: none;
+    border-radius: 5px;
+}
+
+button:focus {
+    outline: none;
+}
