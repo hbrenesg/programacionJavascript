@@ -6,8 +6,10 @@ function main() {
     var num1 = 3;
     var num2 = '3';
 
-    ingresar = (num1 == num2); //esto es true
-    ingresar = (num1 === num2); //esto es false
+    // ingresar = (num1 == num2); //esto es true
+    // ingresar = (num1 === num2); //esto es false
+
+    ingresar = ((6 === 3) && (6 === 3));
 
     if (ingresar) {
         // console.log('Hacer trabajo 1');
@@ -52,5 +54,5 @@ function main() {
 
     var num1 = 30;
     var num2 = 40;
-    ß
+
 }

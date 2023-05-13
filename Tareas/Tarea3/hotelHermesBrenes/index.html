@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Hermes Brenes</title>
+    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="mainContainer">
+        <h1>Hotel</h1>
+        <input type="text" placeholder="Nombre" id="nombreInput">
+        <input type="text" placeholder="Apellido" id="apellidoInput">
+        <input type="number" placeholder="Precio Habitación" id="precioInput">
+        <input type="number" placeholder="Noches" id="nochesInput">
+        <select name="descuento" id="descuentoSlt">
+            <option value="1" id="descuento1"></option>
+            <option value="2" id="descuento2"></option>
+            <option value="3" id="descuento3"></option>
+            <option value="4" id="descuento4"></option>
+        </select>
+        <select name="tipoCliente" id="tipoClienteSlt">
+            <option value="NORMAL">Normal</option>
+            <option value="VIP">VIP</option>
+            <option value="PREMIUM">Premium</option>
+        </select>
+        <button id="calculaBtn">Calcular</button>
+        <button id="historialBtn">Historial</button>
+        <p id="historialP"></p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+.tituloContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: serif;
+}
+
+.inputsClearContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.botonesContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputDatos {
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    margin-right: 10px;
+}
+
+button {
+    border-style: none;
+    padding: 10px;
+    margin: 5px;
+    width: 80%;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgb(51, 111, 216);
+    outline: none;
+    border-radius: 5px;
+}
+
+.buttonClear {
+    background-color: rgb(224, 32, 32);
+}

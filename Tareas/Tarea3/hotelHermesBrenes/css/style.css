@@ -1,0 +1,26 @@
+.mainContainer {
+    margin-left: 5%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-top: 5px;
+}
+
+select {
+    margin-top: 5px;
+}
+
+button {
+    min-width: 60px;
+    border-style: none;
+    margin: 5px 0px 0px 0px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(182, 68, 106);
+    outline: none;
+    border-radius: 5px;
+    height: 30px;
+}
