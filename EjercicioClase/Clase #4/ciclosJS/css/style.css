@@ -1,0 +1,11 @@
+.red_box {
+    background-color: #f50057;
+    width: 100px;
+    height: 100px;
+}
+
+.blue_box {
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+}
