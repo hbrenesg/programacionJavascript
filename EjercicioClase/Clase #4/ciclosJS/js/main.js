@@ -1,4 +1,4 @@
-import { div } from './html.js'
+import { div, input } from './html.js'
 
 window.addEventListener('load', init, false);
 
@@ -71,11 +71,15 @@ function init() {
     //     console.log(key);
     //     console.log(esteban[key]);
     // }
-    div(atributos);
+    //div(atributos);
 
     var boxesContainer = document.getElementById('boxesContainer');
-    div(boxesContainer, { className: 'red_box', id: 'redBox' });
+    div(boxesContainer, { className: 'red_box', id: 'redBox', innerHTML: 'Red Box' });
     div(boxesContainer, { className: 'blue_box', id: 'blueBox' });
+    div(boxesContainer, { className: 'green_box', id: 'greenBox' });
+    
+    input(document.body, {placeholder:'prueba'});
+
 
     console.log('App ending');
 
