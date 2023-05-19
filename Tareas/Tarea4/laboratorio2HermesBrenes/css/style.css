@@ -45,3 +45,25 @@ button {
     background-color: rgb(75, 72, 72);
     margin-left: 5px;
 }
+
+.tablaClientes {
+    margin-top: 10px;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid black;
+}
+
+.trHeaderTablaClientes {
+    background-color: rgb(75, 72, 72);
+    color: white;
+    font-size: 0.875rem;
+    letter-spacing: 2%;
+}
+
+.trRojoTablaClientes {
+    color: red;
+}
+
+td {
+    border: 1px solid black;
+}

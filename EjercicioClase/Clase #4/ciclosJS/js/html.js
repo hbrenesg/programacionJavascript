@@ -23,4 +23,5 @@ export function createElement(type, parent, atributos) {
     for (const key in atributos) {
         element[key] = atributos[key];
     }
+    return element;
 }
