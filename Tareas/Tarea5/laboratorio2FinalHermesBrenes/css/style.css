@@ -67,3 +67,27 @@ button {
 td {
     border: 1px solid black;
 }
+
+.botonCobrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
+
+.botonEliminar {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+.botonUpdate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+}

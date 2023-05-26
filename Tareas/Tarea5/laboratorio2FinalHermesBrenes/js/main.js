@@ -50,21 +50,27 @@ function init() {
             createElement('th', clientesTableRowHeader, { innerHTML: 'Email' });
             createElement('th', clientesTableRowHeader, { innerHTML: 'Fondos' });
             createElement('th', clientesTableRowHeader, { innerHTML: 'Mensualidad ' });
+            createElement('th', clientesTableRowHeader, { innerHTML: 'Cobrar' });
+            createElement('th', clientesTableRowHeader, { innerHTML: 'Eliminar' });
+            createElement('th', clientesTableRowHeader, { innerHTML: 'Update' });
         } else {
             var clientesTable = document.getElementById('clientesTbl');
         }
         clientes.forEach((cliente, index) => {
             if ((clientes.length - 1) === index) {
                 if (Number(cliente.fondos) === 0) {
-                    var clientesTableRow = createElement('tr', clientesTable, { className: 'trRojoTablaClientes' });
+                    var clientesTableRow = createElement('tr', clientesTable, { className: 'trRojoTablaClientes', id: index });
                 } else {
-                    var clientesTableRow = createElement('tr', clientesTable);
+                    var clientesTableRow = createElement('tr', clientesTable, { id: 'Fila' + index });
                 }
                 createElement('td', clientesTableRow, { innerHTML: cliente.nombre });
                 createElement('td', clientesTableRow, { innerHTML: cliente.apellido });
                 createElement('td', clientesTableRow, { innerHTML: cliente.email });
                 createElement('td', clientesTableRow, { innerHTML: cliente.fondos });
                 createElement('td', clientesTableRow, { innerHTML: cliente.mensualidad });
+                createElement('td', clientesTableRow, { innerHTML: 'Cobrar', className: 'botonCobrar', onclick: aplicarMensualidad, });
+                createElement('td', clientesTableRow, { innerHTML: 'Eliminar', className: 'botonEliminar' });
+                createElement('td', clientesTableRow, { innerHTML: 'Update', className: 'botonUpdate' });
             }
         })
     }
@@ -75,5 +81,9 @@ function init() {
         emailInput.value = '';
         fondosInput.value = '';
         mensualidadInput.value = '';
+    }
+
+    function aplicarMensualidad() {
+        console.log('prueba');
     }
 }
