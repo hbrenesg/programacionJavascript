@@ -9,7 +9,7 @@ export class Cliente {
 
     cobrarMensualidad() {
         if (this.fondos >= this.mensualidad) {
-
+            this.fondos -= this.mensualidad;
         }
     }
 }
