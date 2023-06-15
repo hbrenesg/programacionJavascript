@@ -22,9 +22,8 @@
 
 .navigation-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: var(--primary-color);
     width: 100%;
     height: var(--navigation-container-hight);
@@ -52,4 +51,24 @@
     font-weight: bold;
     margin-top: 10px;
     cursor: pointer;
+    user-select: none;
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 40px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+    user-select: none;
+}
+
+.hidden {
+    display: none;
 }
