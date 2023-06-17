@@ -1,0 +1,21 @@
+.cardView {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+.cardView_hidded {
+    background-color: var(--cardView-hidden);
+}
+
+.cardView_showing {
+    background-color: var(--cardView-showing);
+}
+
+.cardView_discovered {
+    background-color: var(--cardView-discovered);
+}
