@@ -43,7 +43,7 @@ export class PlayController extends Controller {
                 this.checkGameComplete();
                 if (this.isGameComplete) {
                     this.stopTime();
-                    this.service.sendScore(this.clicks, this.time);
+                    //this.service.sendScore(this.clicks, this.time, this.gameManager.username);
                 }
             }
         }
@@ -85,9 +85,10 @@ export class PlayController extends Controller {
     }
 
     checkGameComplete() {
+        this.isGameComplete = true;
         this.cards.forEach(card => {
-            if (card.isDiscovered === true) {
-                this.isGameComplete = true;
+            if (card.isDiscovered === false) {
+                this.isGameComplete = false;
             }
         });
     }

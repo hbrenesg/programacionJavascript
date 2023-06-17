@@ -12,7 +12,8 @@ export class GameManager {
         this.currentController = null;
         this.backBtn = document.getElementById('backBtn');
         this.contentContainer = document.getElementById('contentContainer');
-        this.changeTo(PLAY_STATE);
+        this.loadUsername();
+        this.changeTo(MENU_STATE);
 
         this.backBtn.onclick = this.onBackBtn.bind(this);
     }
@@ -34,7 +35,12 @@ export class GameManager {
                 break;
 
             case PLAY_STATE:
-                this.currentController = new PlayController(this, this.contentContainer);
+                if (this.isUserNameRegister()) {
+                    this.currentController = new PlayController(this, this.contentContainer);
+                } else {
+                    alert('Please enter username before playing');
+                    this.changeTo(LOGIN_STATE);
+                }
                 break;
 
             case SCORES_STATE:
@@ -56,5 +62,21 @@ export class GameManager {
 
     onBackBtn() {
         this.changeTo(MENU_STATE);
+    }
+
+    registerUsername(username) {
+        this.username = username;
+        this.changeTo(MENU_STATE);
+        localStorage.setItem('username', username);
+    }
+
+    loadUsername() {
+        if (localStorage.getItem('username')) {
+            this.username = localStorage.getItem('username');
+        }
+    }
+
+    isUserNameRegister() {
+        return localStorage.getItem('username');
     }
 }

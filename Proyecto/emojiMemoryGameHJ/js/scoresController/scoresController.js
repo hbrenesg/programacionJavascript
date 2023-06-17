@@ -7,7 +7,12 @@ export class ScoresController extends Controller {
     constructor(gameManager, parent) {
         super(gameManager);
         this.view = new ScoresView(parent);
-        this.service = new ScoresService();
+        this.service = new ScoresService(this.showScores.bind(this));
         this.scores = []; // model
+    }
+
+    showScores(scores) {
+        this.scores = scores;
+        this.view.showScores(scores);
     }
 }
