@@ -1,3 +1,5 @@
+import { Score } from "./score.js";
+
 export class ScoresService {
     constructor(callback) {
         this.callback = callback;
@@ -12,7 +14,12 @@ export class ScoresService {
             if (request.readyState === 4 && request.status === 200) {
                 var responseText = request.responseText;
                 var data = JSON.parse(responseText);
-                this.callback(data);
+                var scores = [];
+                data.forEach(scoreData => {
+                    var score = new Score(scoreData.clicks, scoreData.score, scoreData.time, scoreData.username);
+                    scores.push(score);
+                });
+                this.callback(scores);
             }
         }
         request.send();

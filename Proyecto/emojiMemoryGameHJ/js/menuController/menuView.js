@@ -7,7 +7,7 @@ export class MenuView extends View {
         super(parent);
         this.callback = callback;
         this.container.className = 'menu-controller';
-        var title = createElement('p', this.container, { innerHTML: 'MENU' });
+        var title = createElement('p', this.container, { className: 'game-title', className: 'game-title', innerHTML: 'MENU' });
         this.loginBtn = createElement('div', this.container, { innerHTML: 'LOGIN', className: 'game-button', onclick: this.onLoginBtn.bind(this) });
         this.playBtn = createElement('div', this.container, { innerHTML: 'PLAY', className: 'game-button', onclick: this.onPlayBtn.bind(this) });
         this.scoresBtn = createElement('div', this.container, { innerHTML: 'SCORES', className: 'game-button', onclick: this.onScoresBtn.bind(this) });

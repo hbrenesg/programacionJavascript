@@ -12,7 +12,7 @@ export class PlayView extends View {
         this.hudContainer = createElement('div', this.container, { className: 'play-controller-hudContainer' });
         this.cardsContainer = createElement('div', this.container, { className: 'play-controller-cardsContainer' });
 
-        var title = createElement('p', this.titleContainer, { innerHTML: 'Card Memory Game' });
+        var title = createElement('p', this.titleContainer, { className: 'game-title', innerHTML: 'Card Memory Game' });
         this.hubText = createElement('p', this.hudContainer, {});
         var resetBtn = createElement('div', this.hudContainer, { className: 'play-controller-reset-button', innerHTML: 'Reset', onclick: this.onResetBtn.bind(this) })
     }

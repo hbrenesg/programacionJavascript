@@ -8,11 +8,12 @@ import { ScoresController } from "./scoresController/scoresController.js";
 
 export class GameManager {
     constructor() {
-        this.difficulty = 2;
+        //this.difficulty = 2;
         this.currentController = null;
         this.backBtn = document.getElementById('backBtn');
         this.contentContainer = document.getElementById('contentContainer');
         this.loadUsername();
+        this.loadDifficulty();
         this.changeTo(MENU_STATE);
 
         this.backBtn.onclick = this.onBackBtn.bind(this);
@@ -78,5 +79,16 @@ export class GameManager {
 
     isUserNameRegister() {
         return localStorage.getItem('username');
+    }
+
+    setDifficulty(difficulty) {
+        this.difficulty = difficulty;
+        localStorage.setItem('difficulty', this.difficulty);
+    }
+
+    loadDifficulty() {
+        if (localStorage.getItem('difficulty')) {
+            this.difficulty = Number(localStorage.getItem('difficulty'));
+        }
     }
 }

@@ -8,10 +8,18 @@
     background-color: var(--background-color);
 }
 
-.score-controller-tittleContainer {
+.scores-controller-tittleContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
     width: 90%;
+}
+
+.scores-controller-scoresContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
 }

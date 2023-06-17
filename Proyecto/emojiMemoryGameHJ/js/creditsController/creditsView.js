@@ -5,6 +5,6 @@ export class CreditsView extends View {
     constructor(parent) {
         super(parent);
         this.container.className = 'credits-controller';
-        var title = createElement('p', this.container, { innerHTML: 'CREDITS' });
+        var title = createElement('p', this.container, { className: 'game-title', innerHTML: 'CREDITS' });
     }
 }

@@ -86,3 +86,9 @@
     height: 35px;
     margin-top: 10px;
 }
+
+.game-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 70px;
+}
