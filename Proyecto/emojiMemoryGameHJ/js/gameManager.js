@@ -8,11 +8,11 @@ import { ScoresController } from "./scoresController/scoresController.js";
 
 export class GameManager {
     constructor() {
-        this.difficulty = 8;
+        this.difficulty = 2;
         this.currentController = null;
         this.backBtn = document.getElementById('backBtn');
         this.contentContainer = document.getElementById('contentContainer');
-        this.changeTo(MENU_STATE);
+        this.changeTo(PLAY_STATE);
 
         this.backBtn.onclick = this.onBackBtn.bind(this);
     }

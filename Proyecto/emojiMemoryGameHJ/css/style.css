@@ -3,6 +3,9 @@
     --secondary-color: rgb(134, 151, 146);
     --background-color: white;
     --navigation-container-hight: 60px;
+    --cardView-hidden: rgb(174, 174, 174);
+    --cardView-showing: rgb(255, 128, 128);
+    --cardView-discovered: rgb(73, 184, 253);
 }
 
 * {

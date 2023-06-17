@@ -8,6 +8,48 @@
     background-color: var(--background-color);
 }
 
+
+.play-controller-tittleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 90%;
+}
+
+.play-controller-hudContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 90%;
+}
+
+.play-controller-cardsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    height: auto;
+    background-color: var(--background-color);
+}
+
 .play-controller-card {
     font-size: 70px;
+}
+
+.play-controller-reset-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 40px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+    cursor: pointer;
+    user-select: none;
 }

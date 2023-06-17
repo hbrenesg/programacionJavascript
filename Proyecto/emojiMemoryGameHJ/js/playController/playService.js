@@ -1,7 +1,7 @@
 export class PlayService {
     constructor(difficulty, callback) {
         this.callback = callback;
-        this.url = 'https://us-central1-cenfoprojectsbackend.cloudfunctions.net/app/cards/' + difficulty;
+        this.url = 'https://us-central1-cenfoprojectsbackend.cloudfunctions.net/app/cards/' + difficulty + '/type/food';
         this.getData();
     }
 
@@ -19,5 +19,9 @@ export class PlayService {
             }
         }
         request.send();
+    }
+
+    sendScore(clicks, time) {
+
     }
 }
