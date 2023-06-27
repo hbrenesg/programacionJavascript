@@ -15,13 +15,39 @@ export class DifficultyView extends View {
 
     onLowBtn() {
         this.callback(DIFFICULTY_LOW);
+        this.setSelectedDifficulty(DIFFICULTY_LOW);
     }
 
     onMedBtn() {
         this.callback(DIFFICULTY_MED);
+        this.setSelectedDifficulty(DIFFICULTY_MED);
     }
 
     onHighBtn() {
         this.callback(DIFFICULTY_HIGH);
+        this.setSelectedDifficulty(DIFFICULTY_HIGH);
+    }
+
+    setSelectedDifficulty(difficulty) {
+        this.lowBtn.classList.remove('game-button-selected');
+        this.medBtn.classList.remove('game-button-selected');
+        this.highBtn.classList.remove('game-button-selected');
+
+        switch (difficulty) {
+            case DIFFICULTY_LOW:
+                this.lowBtn.classList.toggle('game-button-selected');
+                break;
+
+            case DIFFICULTY_MED:
+                this.medBtn.classList.toggle('game-button-selected');
+                break;
+
+            case DIFFICULTY_HIGH:
+                this.highBtn.classList.toggle('game-button-selected');
+                break;
+
+            default:
+                break;
+        }
     }
 }

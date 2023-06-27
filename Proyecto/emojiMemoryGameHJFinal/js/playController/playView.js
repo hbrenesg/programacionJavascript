@@ -11,10 +11,11 @@ export class PlayView extends View {
         this.titleContainer = createElement('div', this.container, { className: 'play-controller-tittleContainer' });
         this.hudContainer = createElement('div', this.container, { className: 'play-controller-hudContainer' });
         this.cardsContainer = createElement('div', this.container, { className: 'play-controller-cardsContainer' });
+        createElement('p', this.cardsContainer, { className: 'game-title', innerHTML: 'Loading Cards!' });
 
-        var title = createElement('p', this.titleContainer, { className: 'game-title', innerHTML: 'Card Memory Game' });
-        this.hubText = createElement('p', this.hudContainer, {});
-        var resetBtn = createElement('div', this.hudContainer, { className: 'play-controller-reset-button', innerHTML: 'Reset', onclick: this.onResetBtn.bind(this) })
+        createElement('p', this.titleContainer, { className: 'game-title', innerHTML: 'Card Memory Game' });
+        this.hubText = createElement('p', this.hudContainer, { className: 'play-controller-hud' });
+        createElement('div', this.hudContainer, { className: 'play-controller-reset-button', innerHTML: 'RESET', onclick: this.onResetBtn.bind(this) })
     }
 
     showCards(cards) {
@@ -29,6 +30,6 @@ export class PlayView extends View {
     }
 
     updateHubText(clicks, time) {
-        this.hubText.innerHTML = `Clicks: ${clicks} Time: ${time}`;
+        this.hubText.innerHTML = `Clicks: ${clicks}   Time: ${time}`;
     }
 }

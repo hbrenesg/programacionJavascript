@@ -19,10 +19,11 @@
 
 .play-controller-hudContainer {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 60px;
     width: 90%;
+    margin-top: 20px;
 }
 
 .play-controller-cardsContainer {
@@ -49,7 +50,12 @@
     border-radius: 10px;
     color: white;
     font-weight: bold;
+    font-size: 20px;
     margin-left: 10px;
     cursor: pointer;
     user-select: none;
+}
+
+.play-controller-hud {
+    font-size: 25px;
 }

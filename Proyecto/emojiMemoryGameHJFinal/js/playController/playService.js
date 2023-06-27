@@ -1,12 +1,13 @@
 export class PlayService {
-    constructor(difficulty, callback) {
+    constructor(difficulty, theme, callback) {
         this.callback = callback;
         this.difficulty = difficulty;
+        this.theme = theme;
         this.getData();
     }
 
     getData() {
-        var url = 'https://us-central1-cenfoprojectsbackend.cloudfunctions.net/app/cards/' + this.difficulty + '/type/food';
+        var url = 'https://us-central1-cenfoprojectsbackend.cloudfunctions.net/app/cards/' + this.difficulty + '/type/' + this.theme;
         var request = new XMLHttpRequest();
         request.open('GET', url);
         request.onload = () => {
@@ -23,10 +24,10 @@ export class PlayService {
     }
 
     sendScore(clicks, time, username) {
-        var url = 'https://us-central1-cenfoprojectsbackend.cloudfunctions.net/app/scores';
+        var url = 'https://emojimemorygame-fa133-default-rtdb.firebaseio.com/data/scores.json';
         var score = { 'clicks': clicks, 'score': (clicks + time), 'time': time, 'username': username };
         var request = new XMLHttpRequest();
-        request.open('SEND', url);
+        request.open('POST', url);
         request.send(JSON.stringify(score));
     }
 }

@@ -8,6 +8,7 @@ export class DifficultyController extends Controller {
         super(gameManager);
         this.view = new DifficultyView(parent, this.difficultySelected.bind(this));
         this.service = new DifficultyService();
+        this.view.setSelectedDifficulty(this.gameManager.difficulty);
     }
 
     difficultySelected(difficulty) {

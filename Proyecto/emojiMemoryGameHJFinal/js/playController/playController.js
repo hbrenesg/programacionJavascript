@@ -7,7 +7,7 @@ export class PlayController extends Controller {
     constructor(gameManager, parent) {
         super(gameManager);
         this.view = new PlayView(parent, this.onCardSelected.bind(this), this.reset.bind(this));
-        this.service = new PlayService(this.gameManager.difficulty, this.showCards.bind(this));
+        this.service = new PlayService(this.gameManager.difficulty, this.gameManager.theme, this.showCards.bind(this));
         this.cards = []; // model
         this.cardView1 = null;
         this.cardView2 = null;
@@ -47,7 +47,9 @@ export class PlayController extends Controller {
                 this.checkGameComplete();
                 if (this.isGameComplete) {
                     this.stopTime();
-                    //this.service.sendScore(this.clicks, this.time, this.gameManager.username);
+                    if (confirm('Do you want to keep the score?')) {
+                        this.service.sendScore(this.clicks, this.time, this.gameManager.username);
+                    }
                 }
             }
         }

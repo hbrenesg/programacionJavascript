@@ -1,19 +1,23 @@
 import { PlayController } from "./playController/playController.js";
-import { CREDITS_STATE, DIFFICULTY_STATE, LOGIN_STATE, MENU_STATE, PLAY_STATE, SCORES_STATE } from "./libs/constants.js";
+import { CREDITS_STATE, DIFFICULTY_LOW, DIFFICULTY_STATE, LOGIN_STATE, MENU_STATE, PLAY_STATE, SCORES_STATE, THEME_FOOD, THEME_STATE } from "./libs/constants.js";
 import { MenuController } from "./menuController/menuController.js";
 import { CreditsController } from "./creditsController/creditsController.js";
 import { DifficultyController } from "./difficultyController/difficultyController.js";
 import { LoginController } from "./loginController/loginController.js";
 import { ScoresController } from "./scoresController/scoresController.js";
+import { ThemesController } from "./themesController/themesController.js";
 
 export class GameManager {
     constructor() {
-        //this.difficulty = 2;
+        this.username = null;
+        this.difficulty = DIFFICULTY_LOW;
+        this.theme = THEME_FOOD;
         this.currentController = null;
         this.backBtn = document.getElementById('backBtn');
         this.contentContainer = document.getElementById('contentContainer');
         this.loadUsername();
         this.loadDifficulty();
+        this.loadTheme();
         this.changeTo(MENU_STATE);
 
         this.backBtn.onclick = this.onBackBtn.bind(this);
@@ -56,6 +60,10 @@ export class GameManager {
                 this.currentController = new CreditsController(this, this.contentContainer);
                 break;
 
+            case THEME_STATE:
+                this.currentController = new ThemesController(this, this.contentContainer);
+                break;
+
             default:
                 break;
         }
@@ -89,6 +97,17 @@ export class GameManager {
     loadDifficulty() {
         if (localStorage.getItem('difficulty')) {
             this.difficulty = Number(localStorage.getItem('difficulty'));
+        }
+    }
+
+    setTheme(theme) {
+        this.theme = theme;
+        localStorage.setItem('theme', this.theme);
+    }
+
+    loadTheme() {
+        if (localStorage.getItem('theme')) {
+            this.theme = localStorage.getItem('theme');
         }
     }
 }
